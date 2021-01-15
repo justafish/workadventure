@@ -36,7 +36,7 @@ services:
       UPLOADER_URL: uploader.retreat.lullabot.com
       ADMIN_URL: admin.retreat.lullabot.com
       STARTUP_COMMAND_1: yarn install
-      TURN_SERVER: "turn:coturn.workadventu.re:443,turns:coturn.workadventu.re:443"
+      TURN_SERVER: "turn:coturn.lullabot.com:3478,turns:coturn.lullabot.com:3478"
       TURN_USER: workadventure
       TURN_PASSWORD: WorkAdventure123
     command: yarn run start
