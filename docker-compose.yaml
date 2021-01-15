@@ -21,7 +21,7 @@ services:
       - back
       - front
     volumes:
-      - ./letsencrypt:/letsencrypt
+      - /var/docker/letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
 
   front:
