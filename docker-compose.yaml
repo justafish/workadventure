@@ -50,6 +50,7 @@ services:
       - "traefik.http.routers.front-ssl.entryPoints=websecure"
       - "traefik.http.routers.front-ssl.tls=true"
       - "traefik.http.routers.front-ssl.service=front"
+      - "traefik.http.routers.front.tls.certresolver=myresolver"
 
   pusher:
     image: thecodingmachine/nodejs:12
@@ -75,6 +76,7 @@ services:
       - "traefik.http.routers.pusher-ssl.entryPoints=websecure"
       - "traefik.http.routers.pusher-ssl.tls=true"
       - "traefik.http.routers.pusher-ssl.service=pusher"
+      - "traefik.http.routers.pusher.tls.certresolver=myresolver"
 
   maps:
     image: thecodingmachine/nodejs:12-apache
@@ -98,6 +100,7 @@ services:
       - "traefik.http.routers.maps-ssl.entryPoints=websecure"
       - "traefik.http.routers.maps-ssl.tls=true"
       - "traefik.http.routers.maps-ssl.service=maps"
+      - "traefik.http.routers.maps.tls.certresolver=myresolver"
 
   back:
     image: thecodingmachine/nodejs:12
@@ -122,6 +125,7 @@ services:
       - "traefik.http.routers.back-ssl.entryPoints=websecure"
       - "traefik.http.routers.back-ssl.tls=true"
       - "traefik.http.routers.back-ssl.service=back"
+      - "traefik.http.routers.back.tls.certresolver=myresolver"
 
   uploader:
     image: thecodingmachine/nodejs:12
@@ -140,6 +144,7 @@ services:
       - "traefik.http.routers.uploader-ssl.entryPoints=websecure"
       - "traefik.http.routers.uploader-ssl.tls=true"
       - "traefik.http.routers.uploader-ssl.service=uploader"
+      - "traefik.http.routers.uploader.tls.certresolver=myresolver"
 
   website:
     image: thecodingmachine/nodejs:12-apache
@@ -157,6 +162,7 @@ services:
       - "traefik.http.routers.website-ssl.entryPoints=websecure"
       - "traefik.http.routers.website-ssl.tls=true"
       - "traefik.http.routers.website-ssl.service=website"
+      - "traefik.http.routers.website.tls.certresolver=myresolver"
 
   messages:
     #image: thecodingmachine/nodejs:14
