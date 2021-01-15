@@ -41,7 +41,7 @@ export class LoginScene extends ResizableScene {
         cypressAsserter.initStarted();
 
         this.textField = new TextField(this, this.game.renderer.width / 2, 50, 'Enter your name:');
-        this.nameInput = new TextInput(this, this.game.renderer.width / 2, 70, 8, this.name,(text: string) => {
+        this.nameInput = new TextInput(this, this.game.renderer.width / 2, 70, 12, this.name,(text: string) => {
             this.name = text;
         });
 
