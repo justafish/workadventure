@@ -19,7 +19,12 @@ export class VideoPeer extends Peer {
             initiator: initiator ? initiator : false,
             reconnectTimer: 10000,
             config: {
-                iceServers: [
+		iceServers: [
+		    {
+                        urls: 'turn:coturn.lullabot.com:3478',
+                        username: 'workadventure',
+                        credential: 'WorkAdventure123'
+                    },
                     {
                         urls: 'stun:stun.l.google.com:19302'
                     },

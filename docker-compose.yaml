@@ -147,3 +147,7 @@ services:
       - ./back:/usr/src/back
       - ./front:/usr/src/front
       - ./pusher:/usr/src/pusher
+networks:
+  default:
+    external:
+      name: jitsi_meet.jitsi

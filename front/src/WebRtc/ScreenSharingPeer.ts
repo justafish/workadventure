@@ -23,9 +23,14 @@ export class ScreenSharingPeer extends Peer {
             reconnectTimer: 10000,
             config: {
                 iceServers: [
+		    {
+                        urls: 'turn:coturn.lullabot.com:3478',
+                        username: 'workadventure',
+                        credential: 'WorkAdventure123'
+                    },
                     {
                         urls: 'stun:stun.l.google.com:19302'
-                    },
+		    },
                     {
                         urls: TURN_SERVER.split(','),
                         username: TURN_USER,

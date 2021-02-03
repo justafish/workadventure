@@ -7,7 +7,7 @@ import {localUserStore} from "./LocalUserStore";
 import {LocalUser} from "./LocalUser";
 import {Room} from "./Room";
 
-const URL_ROOM_STARTED = '_/global/rc3.challengepower.info/main.json';
+const URL_ROOM_STARTED = '_/tuffshed/justafish.github.io/workadventure-map/start.json';
 
 class ConnectionManager {
     private localUser!:LocalUser;

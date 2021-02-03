@@ -17,11 +17,11 @@ import {localUserStore} from "./Connexion/LocalUserStore";
 import {ErrorScene} from "./Phaser/Reconnecting/ErrorScene";
 
 // Load Jitsi if the environment variable is set.
-if (JITSI_URL) {
+//if (JITSI_URL) {
     const jitsiScript = document.createElement('script');
-    jitsiScript.src = 'https://' + JITSI_URL + '/external_api.js';
+    jitsiScript.src = 'https://meet.lullabot.com/external_api.js';
     document.head.appendChild(jitsiScript);
-}
+//}
 
 const {width, height} = coWebsiteManager.getGameSize();
 

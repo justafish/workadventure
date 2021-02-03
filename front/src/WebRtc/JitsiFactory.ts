@@ -32,7 +32,7 @@ class JitsiFactory {
     
     public start(roomName: string, playerName:string, jwt?: string): void {
         coWebsiteManager.insertCoWebsite((cowebsiteDiv => {
-            const domain = JITSI_URL;
+	    const domain = 'meet.lullabot.com'; //JITSI_URL;
             const options: any = { // eslint-disable-line @typescript-eslint/no-explicit-any
                 roomName: roomName,
                 jwt: jwt,
