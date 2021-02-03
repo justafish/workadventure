@@ -13,7 +13,8 @@ const animationTime = 500; //time used by the css transitions, in ms.
 
 class CoWebsiteManager {
     
-    private opened: iframeStates = iframeStates.closed; 
+    private opened: iframeStates = iframeStates.closed;
+    private numberOpened: number = 0;
 
     private observers = new Array<CoWebsiteStateChangedCallback>();
     /**
@@ -30,6 +31,8 @@ class CoWebsiteManager {
     private close(): void {
         this.cowebsiteDiv.classList.remove('loaded'); //edit the css class to trigger the transition
         this.cowebsiteDiv.classList.add('hidden');
+        this.numberOpened = 0;
+        this.cowebsiteDiv.removeAttribute('data-number-opened');
         this.opened = iframeStates.closed;
     }
     private load(): void {
@@ -39,6 +42,8 @@ class CoWebsiteManager {
     }
     private open(): void {
         this.cowebsiteDiv.classList.remove('loading', 'hidden'); //edit the css class to trigger the transition
+        this.numberOpened++;
+        this.cowebsiteDiv.setAttribute('data-number-opened', this.numberOpened.toString());
         this.opened = iframeStates.opened;
     }
 

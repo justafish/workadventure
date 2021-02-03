@@ -310,6 +310,21 @@ body {
     #cowebsite:hover .close-btn{
         right: 10px;
     }
+    /* Two iframes */
+    #cowebsite[data-number-opened="2"] {
+        width: 100%;
+    }
+    #cowebsite[data-number-opened="2"] iframe {
+        width: 50%;
+    }
+    #cowebsite[data-number-opened="2"] iframe:nth-child(2) {
+        position: absolute;
+        right: 0;
+    }
+    #cowebsite[data-number-opened="2"] .close-btn {
+        z-index: 9999;
+        left: 0;
+    }
 }
 @media (max-aspect-ratio: 1/1) {
     .game-overlay {
@@ -340,6 +355,13 @@ body {
     }
     #cowebsite.hidden {
         transform: translateY(100%);
+    }
+    /* Two iframes */
+    #cowebsite[data-number-opened="2"] {
+        height: 100%;
+    }
+    #cowebsite[data-number-opened="2"] iframe {
+        height: 50%;
     }
 }
 
